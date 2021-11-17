@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" media="screen and (min-width: 768.1px" href="css/view-large.css" />
+		<link rel="stylesheet" media="screen and (max-width: 768px" href="css/view-small.css" />
+		<title>Schedules</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div>
+					<a href="/">
+						<img class="logo" src="img/jimsMarketLogo.png" alt="Jim's Market Logo" />
+					</a>
+				</div>
+
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span class="burger-icon"></span></label>
+
+				<ul class="nav-links">
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/schedules">Schedules</a>
+					</li>
+					<li>
+						<form action="/logout?_method=DELETE" method="POST">
+							<button class="btn btn-logout logout-btn-sm-screen" type="submit">
+								Log Out
+							</button>
+						</form>
+					</li>
+				</ul>
+
+				<form action="/logout?_method=DELETE" method="POST">
+					<button class="btn btn-logout logout-btn-lg-screen" type="submit">
+						Log Out
+					</button>
+				</form>
+			</nav>
+		</header>
+
+		<div class="main">
+			<h1>Schedules</h1>
+			<br />
+			<p>
+				This page is where you can see the schedules for the current week, and the upcoming
+				week. Just like how it is on the bulletin board.
+			</p>
+			<br />
+			<p>
+				Just click on the green buttons for the schedule that you would like to view. It
+				will take you to an new tab where you can view it full screen.
+			</p>
+			<br />
+			<p class="asterisk">
+				* Schedules for upcoming weeks will be posted Wednesday nights or Thursday mornings
+				of the previous week.
+			</p>
+			<div class="weeks">
+				<%# Current Week %>
+				<div>
+					<h2>Current Week</h2>
+					<br />
+					<p>October 24th - October 30th, 2021:</p>
+					<br />
+					<button
+						onclick="window.open('img/sched/checkers/checkers-11-06-21.png','_blank')"
+						type="button"
+						class="btn btn-primary"
+					>
+						Checkers
+					</button>
+					<button
+						onclick="window.open('img/sched/deli/deli-11-06-21.png','_blank')"
+						type="button"
+						class="btn btn-primary"
+					>
+						Deli
+					</button>
+					<button
+						onclick="window.open('img/sched/cClerks/cClerks-11-06-21.png','_blank')"
+						type="button"
+						class="btn btn-primary"
+					>
+						C. Clerks/Meat
+					</button>
+				</div>
+				<%# Upcoming Week %>
+				<div>
+					<h2>Upcoming Week</h2>
+					<br />
+					<p>October 31st - November 6th, 2021:</p>
+					<br />
+
+					<button
+						onclick="window.open('img/sched/checkers/checkers-11-06-21.png','_blank')"
+						type="button"
+						class="btn btn-primary"
+					>
+						Checkers
+					</button>
+					<button
+						onclick="window.open('img/sched/deli/deli-11-06-21.png','_blank')"
+						type="button"
+						class="btn btn-primary"
+					>
+						Deli
+					</button>
+					<button
+						onclick="window.open('img/sched/cClerks/cClerks-11-06-21.png','_blank')"
+						type="button"
+						class="btn btn-primary"
+					>
+						C. Clerks/Meat
+					</button>
+				</div>
+			</div>
+		</div>
+		<footer class="center">
+			<div>
+				Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+			</div>
+			<div>
+				<p>Background photo was taken by: Dave Worden, December 2020.</p>
+			</div>
+			<div>
+				<p>Site created by: Trent Ward, November 2021.</p>
+			</div>
+		</footer>
+	</body>
+</html>

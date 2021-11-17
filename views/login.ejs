@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Log In</title>
+	</head>
+	<body class="center jims-background">
+		<img class="logo" src="img/jimsMarketLogo.png" alt="Jim's Market Logo" />
+		<br />
+		<h1>Jim's Employees Only</h1>
+		<br />
+		<p>Login using the username and password</p>
+		<div class="login-page">
+			<img src="img/grocery-cart.png" alt="grocery cart" />
+			<% if (messages.error) { %> <%= messages.error %> <% } %>
+			<form action="/login" method="POST">
+				<div class="input-wrapper">
+					<input
+						type="text"
+						id="username"
+						name="username"
+						class="form-control"
+						placeholder="Username"
+						required
+					/>
+					<label for="username" class="control-label">Username</label>
+				</div>
+				<div class="input-wrapper">
+					<input
+						type="password"
+						id="password"
+						name="password"
+						class="form-control"
+						placeholder="Password"
+						required
+					/>
+					<label for="password" class="control-label">Password</label>
+				</div>
+				<button type="submit" class="btn btn-primary">Login</button>
+			</form>
+		</div>
+		<footer class="center">
+			<div>
+				Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+			</div>
+			<div>
+				<p>Background photo was taken by: Dave Worden, December 2020.</p>
+			</div>
+			<div>
+				<p>Site created by: Trent Ward, November 2021.</p>
+			</div>
+		</footer>
+	</body>
+</html>
