@@ -2,7 +2,7 @@
 	"name": "jims_emp_website",
 	"version": "1.0.0",
 	"description": "",
-	"main": "home.js",
+	"main": "index.js",
 	"scripts": {
 		"start": "nodemon server.js"
 	},
