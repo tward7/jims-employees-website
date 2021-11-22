@@ -17,6 +17,24 @@
 	box-sizing: border-box;
 }
 
+/* html */
+html {
+	height: 100%;
+}
+
+/* body */
+body {
+	font-family: sans-serif;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+p.asterisk {
+	font-style: italic;
+	font-size: 15px;
+}
+
 /* nav menu css for all screens */
 nav {
 	background-color: var(--nav-back-color);
@@ -46,28 +64,11 @@ nav {
 	border-radius: 5px;
 }
 
-/* html */
-html {
-	height: 100%;
-}
-
-/* body */
-body {
-	font-family: sans-serif;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-p.asterisk {
-	font-style: italic;
-	font-size: 15px;
-}
 /* main div */
 .main {
 	padding: 20px 20px 250px 20px;
 	background-color: var(--main-back-color);
-	height: auto;
+	flex: 1 0 auto;
 }
 
 .main h1,
@@ -220,7 +221,7 @@ button {
 footer {
 	background-color: var(--footer-back-color);
 	color: var(--footer-text-color);
-	margin-top: auto;
+	flex-shrink: 0;
 	width: 100%;
 }
 
