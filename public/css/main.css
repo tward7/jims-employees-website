@@ -90,6 +90,29 @@ h3 {
 	padding-bottom: 10px;
 }
 
+/* reminders flexbox */
+.reminders {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.reminders div {
+	margin: 10px 30px 10px 30px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.reminders div p {
+	padding: 10px;
+}
+
+.icons {
+	height: 50px;
+}
+
 /* weeks flexbox */
 .weeks {
 	display: flex;
