@@ -1,5 +1,4 @@
-/* currently not using */
-@import url("main.css");
+/* default styles for mobile devices */
 /* navigation menu for MOBILE */
 /* class names for navigation menu for MOBILE */
 .logo {
@@ -27,10 +26,9 @@
 .nav-links {
 	clear: both;
 	max-height: 0;
-	transition: max-height 0.2s ease-out;
 }
 
-/* --- below is making chackbox into burger button --- */
+/* --- below is making checkbox into burger button --- */
 .menu-icon {
 	padding: 23px;
 	position: relative;
@@ -93,4 +91,44 @@
 .menu-btn:checked ~ .menu-icon .burger-icon:after {
 	transform: rotate(45deg);
 	top: 0;
+}
+
+/* ---------------------------------- */
+/* style for larger screens (desktop) */
+@media screen and (min-width: 768px) {
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	/* class names for navigation menu */
+
+	.nav-links {
+		display: flex;
+		justify-content: space-around;
+		width: 40%;
+	}
+
+	.nav-links {
+		overflow: visible;
+	}
+
+	.nav-links li {
+		padding: 0px;
+	}
+
+	.nav-links {
+		clear: none;
+		max-height: 50px;
+	}
+
+	.logout-btn-lg-screen {
+		display: inline-block;
+	}
+
+	.menu-btn,
+	.burger-icon,
+	.logout-btn-sm-screen {
+		display: none;
+	}
 }
