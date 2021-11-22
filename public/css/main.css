@@ -67,7 +67,7 @@ p.asterisk {
 .main {
 	padding: 20px 20px 250px 20px;
 	background-color: var(--main-back-color);
-	height: 100%;
+	height: auto;
 }
 
 .main h1,
