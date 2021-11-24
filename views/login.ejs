@@ -22,7 +22,11 @@
             </div>
 
             <div class="login-page-main">
-                <img src="img/grocery-cart.png" alt="grocery cart" />
+                <img
+                    class="icons"
+                    src="img/grocery-cart.png"
+                    alt="grocery cart"
+                />
                 <% if (messages.error) { %> <%= messages.error %> <% } %>
                 <form action="/login" method="POST">
                     <div class="input-wrapper">

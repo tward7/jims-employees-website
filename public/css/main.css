@@ -2,7 +2,6 @@
 * {
     --main-back-color: #ddd5bb;
     --nav-back-color: #c4b47f;
-    --nav-back-color-opacity: #c4b47f85;
     --nav-color: #fff;
     --nav-hover-color: #005d3b;
     --btn-text-color: #fff;
@@ -88,8 +87,8 @@ nav {
 }
 
 .inner-container h1,
-h2,
-h3 {
+.inner-container h2,
+.inner-container h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,10 +99,6 @@ h3 {
 .inner-container p {
     margin-left: 20px;
     margin-right: 20px;
-}
-.inner-container div {
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 /* reminders flexbox */
@@ -189,7 +184,7 @@ h3 {
 /* login page main form styles */
 .login-page-main {
     background-color: var(--nav-back-color);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
     margin: 40px 40px 150px 40px;
     display: flex;
@@ -204,15 +199,33 @@ h3 {
 }
 
 .login-page-main img,
-button {
-    margin: 20px;
+.login-page-main button {
+    margin: 10px;
 }
 
-.login-page-main img {
-    height: 50px;
+/* --- notifications form styles --- */
+.notifications-form {
+    background-color: var(--nav-back-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* floating input labels */
+.notifications-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notifications-form img,
+.notifications-form button {
+    margin: 10px;
+}
+
+/* floating input labels for FORMS */
 .input-wrapper {
     position: relative;
     margin: 20px;
@@ -222,8 +235,8 @@ button {
     display: block;
     line-height: 2em;
     margin: 0;
-    padding-left: 10px;
     width: 100%;
+    padding-left: 10px;
     font-size: medium;
     border: 1px solid #f4f4f4;
     background-color: #f4f4f4;
@@ -232,7 +245,8 @@ button {
 }
 
 .form-control:focus {
-    border: 1px solid #2c7ac9;
+    border: 2px solid var(--btn-back-color);
+    outline: none;
 }
 
 .control-label {
