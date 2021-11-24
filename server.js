@@ -27,7 +27,7 @@ const app = express();
 const dbURL = process.env.EMP_DB;
 mongoose
     .connect(dbURL)
-    .then((result) => console.log("Connected to db"))
+    .then((result) => app.listen(port))
     .catch((err) => console.log(err));
 
 // initialize passport authentication
@@ -136,5 +136,3 @@ app.post("/notify", async (req, res) => {
         res.redirect("/notifications");
     }
 });
-
-app.listen(port);
