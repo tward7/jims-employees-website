@@ -136,3 +136,14 @@ app.post("/notify", async (req, res) => {
         res.redirect("/notifications");
     }
 });
+
+app.get("/all-emails", (req, res) => {
+    Contact.find()
+        .byEmail()
+        .then((result) => {
+            res.send(result);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+});
