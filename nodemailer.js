@@ -6,7 +6,10 @@ const Contact = require("./models/contacts");
 const mongoose = require("mongoose");
 const hbs = require("nodemailer-express-handlebars");
 const dbURL = process.env.EMP_DB;
-mongoose.connect(dbURL);
+mongoose
+    .connect(dbURL)
+    .then((result) => console.log(emailArray))
+    .catch((err) => console.log(err));
 
 // setting up the nodemailer
 //step 1
@@ -27,9 +30,10 @@ transporter.use(
 );
 
 // step 2
+let emailArray = ["trentward02@gmail.com", "trenter2310@gmail.com"];
 let mailOptions = {
     from: process.env.GMAIL_EMAIL,
-    to: "trentward02@gmail.com",
+    to: emailArray,
     subject: "Testing Nodemailer",
     template: "main",
 };

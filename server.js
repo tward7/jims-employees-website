@@ -138,8 +138,7 @@ app.post("/notify", async (req, res) => {
 });
 
 app.get("/all-emails", (req, res) => {
-    Contact.find()
-        .byEmail()
+    Contact.find({}, { _id: 0, email: 1 })
         .then((result) => {
             res.send(result);
         })
