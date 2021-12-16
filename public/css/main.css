@@ -88,7 +88,8 @@ nav {
 
 .inner-container h1,
 .inner-container h2,
-.inner-container h3 {
+.inner-container h3,
+.weeks p {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,12 +133,10 @@ nav {
     align-items: center;
 }
 
-.weeks div {
+.weeks div,
+.weeks h2,
+.weeks p {
     margin: 10px;
-}
-
-.weeks div button {
-    justify-content: space-evenly;
 }
 
 /* buttons for schedules css */
