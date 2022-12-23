@@ -1,3 +1,4 @@
 [submodule "jims-employees-website"]
 	path = jims-employees-website
 	url = https://github.com/tward7/jims-employees-website
+	username = "tward7"
