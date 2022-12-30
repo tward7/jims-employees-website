@@ -87,9 +87,13 @@ app.post(
 );
 
 // delete back to log in page with log out
-app.delete("/logout", (req, res) => {
-    req.logOut();
-    res.redirect("/login");
+app.delete("/logout", function (req, res, next) {
+    req.logOut(function (err) {
+        if (err) {
+            return next(err);
+        }
+        res.redirect("/login");
+    });
 });
 
 function checkAuthenticated(req, res, next) {
