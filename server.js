@@ -23,6 +23,8 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 // connect to mongoDB
+// Mongoose Deprecation warning fixed
+mongoose.set("strictQuery", true);
 // app.listen waits until db is connected
 const dbURL = process.env.EMP_DB;
 mongoose
